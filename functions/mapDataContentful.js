@@ -10,16 +10,21 @@ exports.handler = async function (event, context) {
   });
 
   const mapData = locations.items.map(function (entry) {
-    return {
+    let store = {
       storeName: entry.fields.storeName,
       address: entry.fields.address,
       city: entry.fields.city,
       state: entry.fields.state,
       zipCode: entry.fields.zipCode,
       phone: entry.fields.phone,
-      latitude: entry.fields.latitude,
-      longitude: entry.fields.longitude,
     };
+
+    if (entry.fields.latitude != "" && entry.fields.longitude !== "") {
+      store.latitude = entry.fields.latitude;
+      store.longitude = entry.fields.longitude;
+    }
+
+    return store;
   });
 
   return {
