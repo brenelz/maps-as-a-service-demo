@@ -1,0 +1,23 @@
+{
+  "name": "maps-as-a-service-demo",
+  "version": "1.0.0",
+  "description": "This is a super simple project to create google maps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brenelz/maps-as-a-service-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brenelz/maps-as-a-service-demo/issues"
+  },
+  "homepage": "https://github.com/brenelz/maps-as-a-service-demo#readme",
+  "dependencies": {
+    "contentful": "^8.2.0"
+  }
+}
