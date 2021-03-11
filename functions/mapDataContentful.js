@@ -5,6 +5,12 @@ const client = contentful.createClient({
 });
 
 exports.handler = async function (event, context) {
+  const search = event.queryStringParameters.search;
+  if (search) {
+    // do something
+    console.log("search " + search);
+  }
+
   const locations = await client.getEntries({
     content_type: "locations",
   });

@@ -1,4 +1,10 @@
 exports.handler = async function (event, context) {
+  const search = event.queryStringParameters.search;
+  if (search) {
+    // do something
+    console.log("search " + search);
+  }
+
   const mapData = [
     {
       storeName: "My Store",
